@@ -3,9 +3,11 @@ import './App.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Card from "./components/Card"
+import styled from "styled-components";
+
 
 function App() {
-  const [peoples, setPeoples] = useState([]);
+  const [Peoples, setPeoples] = useState([]);
 
   useEffect(() => {
     console.log('React Wars');
@@ -26,7 +28,7 @@ function App() {
   return (
     <div className="App">
        <h1 className="Header">React Wars</h1>
-       {peoples.map((person, id ) => {
+       {Peoples.map((person, id ) => {
          return(
           <Card key={id} 
           person={person} /> 
